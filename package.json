@@ -1,0 +1,24 @@
+{
+  "name": "blog-backend-postgraphile",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francosion042/Blog-Backend-PostGraphile.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francosion042/Blog-Backend-PostGraphile/issues"
+  },
+  "homepage": "https://github.com/francosion042/Blog-Backend-PostGraphile#readme",
+  "dependencies": {
+    "db-migrate": "^0.11.13",
+    "db-migrate-pg": "^1.2.2"
+  }
+}
