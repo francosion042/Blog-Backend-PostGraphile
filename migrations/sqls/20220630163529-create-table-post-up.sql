@@ -6,4 +6,6 @@ CREATE TABLE blog.post (
   content text NOT NULL,
   created_at timestamptz NOT NULL DEFAULT now(),
   updated_at timestamptz NOT NULL DEFAULT now()
-)
+);
+
+CREATE INDEX post_user_id_index ON blog.post (user_id);
