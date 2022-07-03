@@ -1,5 +1,5 @@
 /* Replace with your SQL commands */
-CREATE OR REPLACE FUNCTION register_user(name TEXT, email TEXT, password TEXT, title TEXT, description TEXT) RETURNS blog.user AS
+CREATE OR REPLACE FUNCTION blog.register_user(name TEXT, email TEXT, password TEXT, title TEXT, description TEXT) RETURNS blog.user AS
 $$
 DECLARE
     userRec blog.user;
