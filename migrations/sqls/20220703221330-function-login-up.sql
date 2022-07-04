@@ -5,7 +5,7 @@ DECLARE
     userAuth auth.user_auth;
 BEGIN
     BEGIN
-        SELECT * INTO userAuth FROM auth.user_auth WHERE userAuth.email = login.email AND password = crypt(password, userAuth.password);
+        SELECT * INTO userAuth FROM auth.user_auth WHERE userAuth.email = login.email AND userAuth.password = crypt(login.password, userAuth.password);
         
         RETURN ('Bearer ', userAuth.user_id, extract(epoch from (now() + interval '1 day')))::blog.jwt;
         EXCEPTION WHEN no_data_found THEN
