@@ -7,5 +7,5 @@ postgraphile \
 --owner-connection postgres://postgres:ElsTony24@localhost:5432/blog_postgraphile \
 --default-role blog_guest \
 --jwt-token-identifier blog.jwt \
---jwt-seecret secret \
+--jwt-secret secret \
 --watch \
