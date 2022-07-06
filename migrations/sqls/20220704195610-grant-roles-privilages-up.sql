@@ -13,3 +13,5 @@ GRANT usage ON SEQUENCE blog.post_id_seq TO blog_user;
 
 GRANT SELECT ON TABLE blog.user TO blog_guest;
 GRANT SELECT ON TABLE blog.post TO blog_guest;
+
+--  🍲 By Anthony

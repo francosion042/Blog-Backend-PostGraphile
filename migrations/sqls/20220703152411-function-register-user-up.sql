@@ -31,8 +31,9 @@ BEGIN
     WHEN unique_violation THEN RAISE 'User with this email already exists';
 
 END;
-
 $$ 
 LANGUAGE plpgsql 
 STRICT 
 SECURITY DEFINER;
+
+--  🍲 By Anthony
