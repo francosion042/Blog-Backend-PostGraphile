@@ -7,7 +7,7 @@ BEGIN
     BEGIN
         INSERT INTO blog.user (name, title, description) VALUES (name, title, description) RETURNING * INTO userRec;
 
-        INSERT INTO auth.user_auth (user_id, email, password) VALUES (userRec.id, email, crypt(password, gen_salt('bf')));
+        INSERT INTO auth.user_auth (user_id, email, password_hash) VALUES (userRec.id, email, crypt(password, gen_salt('bf')));
         RETURN userRec;
         EXCEPTION WHEN unique_violation THEN
             RAISE WARNING 'User with this email already exists';
