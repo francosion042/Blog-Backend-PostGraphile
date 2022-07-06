@@ -4,7 +4,7 @@ postgraphile \
 --enhance-graphiql \
 --allow-explain \
 --append-plugins @graphile-contrib/pg-simplify-inflector \
---owner-connection postgres://postgres:ElsTony24@localhost:5432/blog_postgraphile \
+--owner-connection postgres://your_user:your_password@localhost:5432/blog_postgraphile \
 --default-role blog_guest \
 --jwt-token-identifier blog.jwt \
 --jwt-secret secret \
