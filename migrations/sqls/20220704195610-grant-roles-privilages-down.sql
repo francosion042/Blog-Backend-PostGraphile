@@ -9,6 +9,8 @@ REVOKE EXECUTE ON FUNCTION blog.login(TEXT, TEXT) FROM blog_user, blog_guest;
 REVOKE ALL privileges ON TABLE blog.user FROM blog_user;
 REVOKE ALL privileges ON TABLE blog.post FROM blog_user;
 
+REVOKE usage ON SEQUENCE blog.post_id_seq FROM blog_user;
+
 
 REVOKE SELECT ON TABLE blog.user FROM blog_guest;
 REVOKE SELECT ON TABLE blog.post FROM blog_guest;
