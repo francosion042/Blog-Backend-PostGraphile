@@ -8,7 +8,7 @@ BEGIN
         SELECT * INTO userAuth FROM auth.user_auth WHERE user_auth.email = login.email;
 
         IF userAuth.password_hash = crypt(password, userAuth.password_hash) THEN
-            RETURN ('Bearer', userAuth.user_id, extract(epoch from (now() + interval '3 days')))::blog.jwt;
+            RETURN ('blog_user', userAuth.user_id, extract(epoch from (now() + interval '3 days')))::blog.jwt;
         ELSE
             RAISE 'Wrong Password';
         END IF;
